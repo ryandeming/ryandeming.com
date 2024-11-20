@@ -7,7 +7,7 @@
                     <li class="sep">•</li>
                     <li>About</li>
                     <li class="sep">•</li>
-                    <li><img src="/assets/ryandeming_logo.png"></li>
+                    <li><img src="/assets/ryandeming_logo.webp"></li>
                     <li class="sep">•</li>
                     <li>Work</li>
                     <li class="sep">•</li>
@@ -18,7 +18,8 @@
     </div>
    
     <div class="video-container">
-        <video autoplay muted loop playsinline style="margin: 0 auto; mix-blend-mode: plus-lighter; width: 480px; height: 360px;">
+        <img id="video-placeholder" src="/assets/background.webp" alt="background image" decoding="async" style="margin: 0 auto; mix-blend-mode: plus-lighter; width: 480px; height: 360px;">
+        <video id="background-video" muted loop playsinline preload="metadata" style="margin: 0 auto; mix-blend-mode: plus-lighter; width: 480px; height: 360px; display: none; pointer-events: none;">
             <source src="/assets/background.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -43,6 +44,16 @@
                     <div class="role">
                         <h3>Senior Developer · Freerateupdate</h3>
                         <p>Build and maintain internal products that enhance operational efficiency, working closely with cross-functional teams, including developers, designers, and project managers. Advocating for scalable solutions by introducing new features and ensuring alignment with evolving business goals.</p>
+                        <ul class="technologies">
+                            <li>Javascript</li>
+                            <li>Angular</li>
+                            <li>Vue</li>
+                            <li>PHP</li>
+                            <li>Codeigniter</li>
+                            <li>Laravel</li>
+                            <li>WordPress</li>
+                            <li>Figma</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="job">
@@ -50,6 +61,13 @@
                     <div class="role">
                         <h3>Lead Developer · Sagefrog</h3>
                         <p>Mentored and managed a team of developers, providing guidance, conducting quarterly performance reviews, and fostering growth to maintain consistent quality across projects. Collaborated with account managers, designers, and clients to accurately define technical requirements and ensure seamless project execution.</p>
+                        <ul class="technologies">
+                            <li>Javascript</li>
+                            <li>jQuery</li>
+                            <li>Vue</li>
+                            <li>PHP</li>
+                            <li>WordPress</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="job">
@@ -57,8 +75,16 @@
                     <div class="role">
                         <h3>Fullstack Developer · Fyra</h3>
                         <p>Designed and developed client websites leveraging WordPress and Laravel, delivering scalable and user-friendly solutions.</p>
+                        <ul class="technologies">
+                            <li>Javascript</li>
+                            <li>jQuery</li>
+                            <li>PHP</li>
+                            <li>WordPress</li>
+                            <li>Laravel</li>
+                        </ul>
                     </div>
                 </div>
+                <a href="/assets/ryan-deming-resume-2024.pdf" class="btn" target="_blank" style="margin: 0 auto;">Download Resume</a>
             </div>
         </div>
     </div>
@@ -68,13 +94,13 @@
         <div class="portfolio-images">
             <h2>Portfolio</h2>
             <div class="portfolio-image active" data-id="1">
-                <img src="/assets/portfolio-1.png">
+                <img src="/assets/portfolio-1.webp" height="394px" width="590px" style="max-width: 100%;">
             </div>
             <div class="portfolio-image" data-id="2">
-                <img src="/assets/portfolio-2.png">
+                <img src="/assets/portfolio-2.webp" height="394px" width="590px" style="max-width: 100%;">
             </div>
             <div class="portfolio-image" data-id="3">
-                <img src="/assets/portfolio-3.png">
+                <img src="/assets/portfolio-3.webp" height="394px" width="590px" style="max-width: 100%;">
             </div>
         </div>
         <div class="portfolio-content">
@@ -85,28 +111,34 @@
             </div>
             <div class="project-description active" data-id="1">
                 <div class="mobile-image">
-                    <img src="/assets/portfolio-1.png" height="394px" width="590px" style="max-width: 100%;">
+                    <img src="/assets/portfolio-1.webp">
                 </div>
                 <h3>Landscaping Web Design</h3>
                 <h4>Villanova Landscaping</h4>
                 <p>Crafted a modern, user-friendly website for Villanova Landscaping to showcase their services and elevate their online presence. Leveraged responsive design principles to ensure seamless functionality across devices and implemented SEO best practices to drive organic traffic and local visibility.</p>
+                <a class="btn" href="#" style="margin-top: 1.5rem;">View Project</a>
             </div>
             <div class="project-description" data-id="2">
                 <div class="mobile-image">
-                    <img src="/assets/portfolio-2.png"  height="394px" width="590px" style="max-width: 100%;">
+                    <img src="/assets/portfolio-2.webp">
                 </div>
                 <h3>Motorcycle Dealership Web Design</h3>
                 <h4>Split Lane Cycles</h4>
                 <p>Crafted a modern, user-friendly website for Villanova Landscaping to showcase their services and elevate their online presence. Leveraged responsive design principles to ensure seamless functionality across devices and implemented SEO best practices to drive organic traffic and local visibility.</p>
+                <a class="btn" href="#" style="margin-top: 1.5rem;">View Project</a>
             </div>
             <div class="project-description" data-id="3">
                 <div class="mobile-image">
-                    <img src="/assets/portfolio-2.png"  height="394px" width="590px" style="max-width: 100%;">
+                    <img src="/assets/portfolio-3.webp">
                 </div>
                 <h3>Plumbing Web Design</h3>
                 <h4>Ray's Plumbing Service</h4>
                 <p>Crafted a modern, user-friendly website for Villanova Landscaping to showcase their services and elevate their online presence. Leveraged responsive design principles to ensure seamless functionality across devices and implemented SEO best practices to drive organic traffic and local visibility.</p>
+                <a class="btn" href="#" style="margin-top: 1.5rem;">View Project</a>
             </div>
         </div>
     </div>
 </section>
+<footer>
+    <p>Copyright © 2024 Ryan Deming</p>
+</footer>

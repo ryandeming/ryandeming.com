@@ -1,5 +1,25 @@
 // This is all you.
 document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('background-video');
+    const placeholder = document.getElementById('video-placeholder');
+    console.log('dom content loaded');
+
+    // Add event listeners for debugging
+    video.addEventListener('loadeddata', function() {
+        console.log('Video data loaded');
+    });
+
+    video.addEventListener('canplay', function() {
+        console.log('can play');
+        placeholder.style.display = 'none';
+        video.style.display = 'block';
+        video.play();
+    });
+
+    video.addEventListener('error', function(e) {
+        console.error('Video error:', e);
+    });
+
     const navItems = document.querySelectorAll('.nav-item');
     const portfolioImages = document.querySelectorAll('.portfolio-image');
     const projectDescriptions = document.querySelectorAll('.project-description');
