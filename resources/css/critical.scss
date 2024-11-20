@@ -158,6 +158,10 @@ nav {
     .sep {
         color:rgb(87, 205, 255);
         opacity: 0.5;
+
+        @media screen and (max-width: 540px) {
+            display: none;
+        }
     }
 }
 
