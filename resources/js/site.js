@@ -1,3 +1,8 @@
+import.meta.glob([
+    '../images/**',
+    '../fonts/**',
+]);
+
 // This is all you.
 document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('background-video');
