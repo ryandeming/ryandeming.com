@@ -1,5 +1,5 @@
 ## Source for RyanDeming.com
-No docs here. For installation follow the statamic docs below.
+Just a quick and dirty site I threw together over the weekend. It is not elegant or optimized and it probably never will be. For installation follow the statamic docs below.
 
 
 
