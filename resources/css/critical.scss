@@ -309,6 +309,10 @@ nav ul li:last-child::after {
             left: -40px;
             top: 40px;
 
+            strong {
+                color: var(--white);
+            }
+
             @media screen and (max-width: 960px) {
                 left: -20px;
             }
