@@ -1,0 +1,491 @@
+@use 'reset';
+
+@font-face {
+    font-family: 'Lora';
+    src: url('/assets/fonts/Lora-Regular.woff2') format('woff2'),
+        url('/assets/fonts/Lora-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato-Bold.woff2') format('woff2'),
+        url('/assets/fonts/Lato-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato-Light.woff2') format('woff2'),
+        url('/assets/fonts/Lato-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato-Italic.woff2') format('woff2'),
+        url('/assets/fonts/Lato-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato-Regular.woff2') format('woff2'),
+        url('/assets/fonts/Lato-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --primary: #ABCAE6;
+    --accent: #F7D088;
+    --btnBorder: #fff6e7;
+    --bodyText: #B2C0CC;
+    --boxBorder: #1E2B4B;
+    --boxBG: #0A112B;
+    --bodyBG: #010721;
+    --accentedText: #4E6D86;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background: var(--bodyBG);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+p {
+    line-height: 1.5;
+    color: var(--bodyText);
+    margin: 0;
+
+    & + p {
+        margin-top: 1rem;
+    }
+}
+
+.container {
+    width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+nav {
+    width: 800px;
+    margin: 0 auto 60px;
+    max-width: 100%;
+    color: #ABCAE6;
+
+    img {
+        height: 60px;
+    }
+
+    .sep {
+        color:rgb(87, 205, 255);
+        opacity: 0.5;
+    }
+}
+
+nav ul {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li:last-child::after {
+    content: '';
+}
+
+.hero {
+    background: rgb(16,63,105);
+    background: radial-gradient(circle at top, rgba(16,63,105,1) 0%, rgba(16,63,105,0.3) 32%, rgba(16,63,105,0.0) 60%, rgba(1,7,33,1) 100%);
+    height: 700px;
+    background-position-y: -100px;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 40px 0;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+        background: url('test-bg-overlay2.png');
+        background-size: cover;
+        mix-blend-mode: screen;
+        background-position: center center;
+        opacity: 0.28;
+    }
+
+    .video-container {
+        position: relative;
+    
+        .overlay-text {
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            width: 100%;
+            transform: translateX(-50%);
+            text-align: center;
+    
+            h1 {
+                color: var(--white);
+                letter-spacing: 4px;
+                text-transform: uppercase;
+                font-size: 18px;
+                line-height: 1;
+                font-weight: 500;
+
+                @media screen and (max-width: 540px) {
+                    font-size: 16px;
+                }
+            }
+    
+            span {
+                display: block;
+                font-family: 'Lora', serif;
+                color: var(--white);
+                font-size: 64px;
+                line-height: 1;
+                text-transform: uppercase;
+                margin: 6px 0 10px;
+                letter-spacing: 2px;
+
+                @media screen and (max-width: 540px) {
+                    font-size: 48px;
+                }
+            }
+    
+            h2 {
+                color: var(--accent);
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                font-size: 18px;
+                line-height: 1;
+                font-weight: 500;
+
+                @media screen and (max-width: 540px) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.about-me {
+    .about-me-content {
+        position: relative;
+        max-width: 840px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        background: var(--boxBG);
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('circuit-bg.png');
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(1,7,33,0) 30%, rgba(10,17,43,1) 60%);
+            border: 1px solid var(--boxBorder);
+            z-index: 2;
+
+            @media screen and (max-width: 768px) {
+                background: linear-gradient(180deg, rgba(1,7,33,0) 30%, rgba(10,17,43,1) 60%);
+            }
+        }
+
+        .overlay-panel {
+            position: relative;
+            z-index: 4;
+            border: 4px solid var(--boxBorder);
+            background: var(--bodyBG);
+            width: 330px;
+            text-align: left;
+            padding: 16px 20px;
+            position: absolute;
+            left: -40px;
+            top: 40px;
+
+            @media screen and (max-width: 960px) {
+                left: -20px;
+            }
+
+            @media screen and (max-width: 768px) {
+                top: -40px;
+                width: calc(100% - 80px);
+                left: 40px;
+            }
+
+            @media screen and (max-width: 550px) {
+                top: -40px;
+                width: calc(100% - 40px);
+                left: 20px;
+            }
+
+            h2 {
+                font-family: 'Lora', serif;
+                font-weight: 500;
+                margin: 0;
+                line-height: 1;
+                font-size: 32px;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+        }
+
+        .resume {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            position: relative;
+            z-index: 3;
+            padding-left: 320px;
+
+            @media screen and (max-width: 768px) {
+                padding-left: 0;
+                padding-top: 180px;
+            }
+
+            @media screen and (max-width: 650px) {
+                padding-top: 220px;
+            }
+
+            @media screen and (max-width: 500px) {
+                padding-top: 260px;
+            }
+
+            .job {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 16px;
+
+                @media screen and (max-width: 500px) {
+                    flex-direction: column;
+                    gap: 6px;
+                }
+
+                .date {
+                    width: 110px;
+                    flex-shrink: 0;
+                    font-size: 12px;
+                    color: var(--accentedText);
+                    font-weight: 500;
+                }
+
+                .role {
+                    h3 {
+                        line-height: 1;
+                        margin-bottom: 8px;
+                        font-weight: 500;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.portfolio {
+    padding: 120px 0;
+    position: relative;
+
+    .portfolio-images {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        max-width: 900px;
+        margin: 0 auto;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            height: 215px;
+            z-index: 1;
+
+            @media screen and (max-width: 768px) {
+                height: 140px;
+                top: 60%;
+            }
+        }
+
+        &::before {
+            background: url('circuit-bg.png');
+            opacity: 0.1;
+        }
+
+        &::after {
+            border: 1px solid var(--boxBorder);
+        }
+
+        h2 {
+            color: var(--primary);
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 2px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 32px;
+                color: var(--white);
+                font-family: 'Lora', serif;
+            }
+
+            &::before {
+                // content triangle right
+                content: '';
+                position: relative;
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border-top: 4px solid transparent;
+                border-bottom: 4px solid transparent;
+                border-left: 5px solid var(--primary);
+                margin-right: 10px;
+                top: -1px;
+
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+        }
+
+        .portfolio-image {
+            position: relative;
+            z-index: 2;
+            max-width: 590px;
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+
+    .portfolio-content {
+        display: flex;
+        justify-content: space-between;
+        max-width: 900px;
+        margin: 0 auto;
+
+        .nav {
+            margin-top: 40px;
+
+            .nav-item {
+                margin-top: 20px;
+                color: var(--primary);
+                opacity: 0.5;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                cursor: pointer;
+
+                &::before {
+                    content: '';
+                    position: relative;
+                    display: inline-block;
+                    width: 2px;
+                    height: 1rem;
+                    top: 3px;
+                    background: var(--primary);
+                    margin-right: 10px;
+                    opacity: 0.5;
+                }
+
+                &.active {
+                    opacity: 1;
+                }
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .project-description {
+            width: 590px;
+            max-width: 100%;
+            display: none;
+
+            &.active {
+                display: block;
+            }
+
+            .mobile-image {
+                display: none;
+            }
+
+            h3 {
+                color: var(--accent);
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                font-size: 14px;
+                margin-top: 40px;
+                font-weight: 300px;
+            }
+
+            h4 {
+                font-family: 'Lora', serif;
+                font-size: 48px;
+                font-weight: 500;
+                margin-top: 1rem;
+                line-height: 1.25;
+            }
+
+            p {
+                margin-top: 20px;
+            }
+        }
+    }
+}

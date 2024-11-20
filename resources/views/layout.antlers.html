@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ title ?? site:name }}</title>
+        {{ vite src="resources/js/site.js|resources/css/critical.scss" }}
+
+
+        <!-- PRELOADS -->
+        <link rel="preload" href="assets/fonts/Lora-Regular.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/Lato-Italic.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/Lato-Bold.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/Lato-Light.woff2" as="font" type="font/woff2" crossorigin>
+
+        <link rel="preload" href="assets/background.mp4" as="video" type="video/mp4" crossorigin>
+        <link rel="preload" href="assets/portfolio-1.png" as="image" type="image/png" crossorigin>
+        <link rel="preload" href="assets/portfolio-2.png" as="image" type="image/png" crossorigin>
+        <link rel="preload" href="assets/portfolio-3.png" as="image" type="image/png" crossorigin>
+
+        
+    </head>
+    <body>
+        <div>
+            {{ template_content }}
+        </div>
+    </body>
+</html>
