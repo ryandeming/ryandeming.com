@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Video data loaded');
     });
 
-    video.addEventListener('canplay', function() {
+    video.addEventListener('loadedmetadata', function() {
         console.log('can play');
         placeholder.style.display = 'none';
         video.style.display = 'block';
@@ -24,6 +24,18 @@ document.addEventListener('DOMContentLoaded', function() {
     video.addEventListener('error', function(e) {
         console.error('Video error:', e);
     });
+
+    // Fallback for Safari
+    setTimeout(function() {
+        if (video.readyState >= 3) { // HAVE_FUTURE_DATA
+            console.log('Fallback: Video ready state is sufficient');
+            placeholder.style.display = 'none';
+            video.style.display = 'block';
+            video.play();
+        } else {
+            console.log('Fallback: Video not ready, showing placeholder');
+        }
+    }, 3000);
 
     const navItems = document.querySelectorAll('.nav-item');
     const portfolioImages = document.querySelectorAll('.portfolio-image');
