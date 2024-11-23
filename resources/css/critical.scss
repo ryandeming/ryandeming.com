@@ -273,6 +273,10 @@ nav ul li:last-child::after {
 .about-me {
     scroll-margin-top: 40px;
 
+    @media screen and (max-width: 768px) {
+        scroll-margin-top: 80px;
+    }
+
     .about-me-content {
         position: relative;
         max-width: 840px;
@@ -604,6 +608,7 @@ nav ul li:last-child::after {
 
                 @media screen and (max-width: 768px) {
                     margin-top: 20px;
+                    letter-spacing: 2px;
                 }
             }
 
