@@ -58,6 +58,10 @@
     --accentedText: #4E6D86;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
@@ -166,6 +170,8 @@ nav {
 }
 
 nav ul {
+    position: relative;
+    z-index: 4;
     max-width: 720px;
     margin: 0 auto;
     display: flex;
@@ -173,6 +179,11 @@ nav ul {
     align-items: center;
     padding: 0;
     list-style: none;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 }
 
 nav ul li:last-child::after {
@@ -260,6 +271,8 @@ nav ul li:last-child::after {
 }
 
 .about-me {
+    scroll-margin-top: 40px;
+
     .about-me-content {
         position: relative;
         max-width: 840px;
@@ -416,6 +429,7 @@ nav ul li:last-child::after {
 .portfolio {
     padding: 120px 0;
     position: relative;
+    scroll-margin-top: -80px;
 
     .portfolio-images {
         position: relative;
