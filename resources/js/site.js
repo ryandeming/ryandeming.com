@@ -4,6 +4,18 @@ import.meta.glob([
 ]);
 
 // This is all you.
+
+// on scroll add active class to header-nav
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.getElementById("header-nav").classList.add('active');
+    } else {
+        document.getElementById("header-nav").classList.remove('active');
+    }
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('background-video');
     const placeholder = document.getElementById('video-placeholder');
@@ -35,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             console.log('Fallback: Video not ready, showing placeholder');
         }
-    }, 3000);
+    }, 1600);
 
     const navItems = document.querySelectorAll('.nav-item');
     const portfolioImages = document.querySelectorAll('.portfolio-image');

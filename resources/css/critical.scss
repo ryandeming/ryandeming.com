@@ -142,6 +142,44 @@ a {
     }
 }
 
+#header-nav {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    padding: 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s;
+
+    header {
+        max-width: 100%;
+    }
+
+    &.active {
+        background: rgba(4, 12, 46, 0.9);
+        margin-top: 0;
+        padding: 12px 20px;
+        top: 0;
+
+        .sep {
+            transition: all 0.3s;
+            opacity: 0.25;
+
+            @media screen and (max-width: 540px) {
+                display: none;
+            }
+        }
+
+        img {
+            transition: all 0.3s;
+            height: 50px;
+        }
+    }
+}
+
 .container {
     width: 1240px;
     padding: 0 20px;
@@ -151,12 +189,12 @@ a {
 
 nav {
     width: 800px;
-    margin: 0 auto 60px;
     max-width: 100%;
     color: #ABCAE6;
 
     img {
         height: 60px;
+        transition: 0.3s all;
     }
 
     .sep {
@@ -197,7 +235,7 @@ nav ul li:last-child::after {
     background-position-y: -100px;
     background-repeat: no-repeat;
     position: relative;
-    padding: 40px 0;
+    padding: 160px 0 40px 0;
 
     &::before {
         content: '';
@@ -271,10 +309,11 @@ nav ul li:last-child::after {
 }
 
 .about-me {
-    scroll-margin-top: 40px;
+    scroll-margin-top: 100px;
+    padding-top: 40px;
 
     @media screen and (max-width: 768px) {
-        scroll-margin-top: 80px;
+        scroll-margin-top: 120px;
     }
 
     .about-me-content {
@@ -433,7 +472,6 @@ nav ul li:last-child::after {
 .portfolio {
     padding: 120px 0;
     position: relative;
-    scroll-margin-top: -80px;
 
     .portfolio-images {
         position: relative;
