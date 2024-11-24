@@ -19,15 +19,8 @@ function scrollFunction() {
 document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('background-video');
     const placeholder = document.getElementById('video-placeholder');
-    console.log('dom content loaded');
-
-    // Add event listeners for debugging
-    video.addEventListener('loadeddata', function() {
-        console.log('Video data loaded');
-    });
 
     video.addEventListener('loadedmetadata', function() {
-        console.log('can play');
         placeholder.style.display = 'none';
         video.style.display = 'block';
         video.play();
@@ -40,12 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fallback for Safari
     setTimeout(function() {
         if (video.readyState >= 3) { // HAVE_FUTURE_DATA
-            console.log('Fallback: Video ready state is sufficient');
             placeholder.style.display = 'none';
             video.style.display = 'block';
             video.play();
-        } else {
-            console.log('Fallback: Video not ready, showing placeholder');
         }
     }, 1600);
 
