@@ -644,6 +644,23 @@ nav ul li:last-child::after {
                 margin-top: 1rem;
             }
 
+            span {
+                display: block;
+                margin-top: 1rem;
+                font-size: 12px;
+                color: var(--accentedText);
+            }
+
+            a:not(.btn) {
+                display: block;
+                color: var(--primary);
+                margin-top: 1rem;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
             .mobile-image {
                 display: none;
                 position: relative;
